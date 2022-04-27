@@ -4,12 +4,19 @@ const exerciseSchema = new Schema({
     _userId: {
         type: Schema.Types.ObjectId,
         required: true
-    }, 
-    description: String,
-    duration: Number,
-    date: {
-        type: Schema.Types.Date,
-    }
+    },
+    description: { 
+        type: String, 
+        required: true 
+    },
+    duration: { 
+        type: Number, 
+        required: true 
+    },
+    date: { 
+        type: Date, 
+        required: true 
+    },
 })
 
 module.exports = new mongoose.model('Exercise', exerciseSchema)

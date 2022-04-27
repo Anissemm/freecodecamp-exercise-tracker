@@ -12,6 +12,7 @@ const setUser = async (req, res, next) => {
             res.status(201).json({ username: user.username, _id: user._id })
         } else {
             user = await User.create({ username })
+            // res.status(201).json(user)
             res.status(201).json({ username: user.username, _id: user._id })
         }
     } catch (error) {
